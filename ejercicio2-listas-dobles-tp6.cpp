@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//iniciando 
 typedef struct tnodo *pnodo;
 typedef struct tnodo{
 	int dato;
