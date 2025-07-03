@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Definición del nodo (a)
 typedef struct tnodo {
 	int dato;
 	struct tnodo *sig;
@@ -10,7 +9,7 @@ typedef struct tnodo {
 
 typedef tnodo *pnodo;
 
-// Definición de la lista doble
+
 typedef struct {
 	pnodo inicio;
 	pnodo fin;
@@ -39,7 +38,7 @@ void insertarInicio(tlista *lista, int valor) {
 	if (lista->inicio != NULL)
 		lista->inicio->ant = nuevo;
 	else
-		lista->fin = nuevo;  // Lista estaba vacía
+		lista->fin = nuevo;  // Lista estaba vacÃ­a
 	
 	lista->inicio = nuevo;
 }
@@ -53,7 +52,7 @@ void insertarFinal(tlista *lista, int valor) {
 	if (lista->fin != NULL)
 		lista->fin->sig = nuevo;
 	else
-		lista->inicio = nuevo;  // Lista estaba vacía
+		lista->inicio = nuevo;  // Lista estaba vacÃ­a
 	
 	lista->fin = nuevo;
 }
@@ -90,7 +89,7 @@ void extraerInicio(tlista *lista) {
 	if (lista->inicio)
 		lista->inicio->ant = NULL;
 	else
-		lista->fin = NULL;  // Lista quedó vacía
+		lista->fin = NULL;  // Lista quedÃ³ vacÃ­a
 	
 	free(aux);
 }
@@ -103,7 +102,7 @@ void extraerFinal(tlista *lista) {
 	if (lista->fin)
 		lista->fin->sig = NULL;
 	else
-		lista->inicio = NULL;  // Lista quedó vacía
+		lista->inicio = NULL;  // Lista quedÃ³ vacÃ­a
 	
 	free(aux);
 }
@@ -113,7 +112,7 @@ void extraerValor(tlista *lista, int valor) {
 	while (actual != NULL && actual->dato != valor)
 		actual = actual->sig;
 	
-	if (actual == NULL) return; // No se encontró el valor
+	if (actual == NULL) return; // No se encontrÃ³ el valor
 	
 	if (actual->ant)
 		actual->ant->sig = actual->sig;
