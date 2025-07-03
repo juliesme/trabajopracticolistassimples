@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//iniciando
 typedef struct tnodo {
 	int dato;
 	struct tnodo *sig;
